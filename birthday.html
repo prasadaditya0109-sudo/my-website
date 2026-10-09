@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Special Person ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #492044, #160b24 70%);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 25px 15px;
+}
+
+.card {
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
+    padding: 35px 23px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 28px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 45px rgba(255,45,117,0.18);
+    position: relative;
+    z-index: 2;
+    animation: appear 1.2s ease;
+}
+
+.top {
+    color: #ff9fc6;
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 9vw, 46px);
+    color: #ffb7d5;
+    text-shadow: 0 0 25px #ff3e8d;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 12px;
+    color: #fff0f6;
+}
+
+.rose {
+    font-size: 75px;
+    margin: 20px 0;
+    display: inline-block;
+    filter: drop-shadow(0 0 15px #ff4b91);
+    animation: heartbeat 1.8s infinite;
+}
+
+p {
+    color: #f6dce9;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 17px 0;
+}
+
+.line {
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff75ad, transparent);
+    margin: 22px auto;
+}
+
+button {
+    border: none;
+    padding: 14px 24px;
+    margin-top: 15px;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(45deg, #ff367f, #bd48c9);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff367f66;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 30px #ff367f;
+}
+
+#message {
+    display: none;
+    margin-top: 25px;
+    padding: 18px 12px;
+    border-radius: 18px;
+    background: rgba(255,80,145,0.1);
+    border: 1px solid rgba(255,150,190,0.25);
+    animation: appear 1s ease;
+}
+
+#message h3 {
+    color: #ff9fc6;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.signature {
+    color: #ff9fc6;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 1;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-115vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+    font-size: 12px;
+    color: #d9aec8;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="top">A SPECIAL DAY • A SPECIAL SOUL</div>
+
+    <h1>Happy Birthday</h1>
+    <h2>To My Favourite Person 💗</h2>
+
+    <div class="rose">🌹</div>
+
+    <p>
+        Today is not just your birthday,
+        it's a celebration of the beautiful person
+        you are. ✨
+        <br>
+        May your smile always shine brighter
+        than a thousand stars. 🌙
+    </p>
+
+    <div class="line"></div>
+
+    <p>
+        You deserve all the happiness,
+        love and beautiful moments
+        this world has to offer. 💕
+    </p>
+
+    <button onclick="openSurprise()">
+        Open Your Special Surprise 💌
+    </button>
+
+    <div id="message">
+        <h3>For You, With Love ❤️</h3>
+
+        <p>
+            Meri pyari si jaan, 🥹💖
+            <br><br>
+            Tumhari smile mere din ko special bana deti hai.
+            Tum khush raho, tumhare saare sapne poore hon,
+            aur tumhari zindagi hamesha pyaar aur khushiyon
+            se bhari rahe. 🌸
+            <br><br>
+            Life tumhe har woh khushi de
+            jiske tum sach mein laayak ho.
+            Aaj ka din tumhare liye utna hi beautiful ho
+            jitni tumhari muskurahat. 🫶🏻
+            <br><br>
+            <strong>Happy Birthday, My Favourite Person! 🎂</strong>
+        </p>
+
+        <div class="signature">
+            Always wishing the best for you 💞
+        </div>
+    </div>
+
+    <div class="footer">MADE WITH ❤️ JUST FOR YOU</div>
+
+</div>
+
+<script>
+function makeHearts(count) {
+    for (let i = 0; i < count; i++) {
+        const heart = document.createElement("span");
+        heart.className = "heart";
+        heart.textContent = ["❤️", "💗", "💕", "✨", "🌸"][
+            Math.floor(Math.random() * 5)
+        ];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (15 + Math.random() * 22) + "px";
+        heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 8500);
+    }
+}
+
+function openSurprise() {
+    document.getElementById("message").style.display = "block";
+    makeHearts(45);
+}
+</script>
+
+</body>
+</html>
